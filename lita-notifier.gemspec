@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-notifier"
-  spec.version       = "0.2.1"
+  spec.version       = "0.2.2"
   spec.authors       = ["Mike Gunderloy"]
   spec.email         = ["MikeG1@larkfarm.com"]
   spec.description   = "Notify one chat room of activity in another chat room"
