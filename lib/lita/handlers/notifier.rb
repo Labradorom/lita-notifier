@@ -9,7 +9,9 @@ module Lita
 
       route(/.+/) do |response|
         room = response.message.room_object
-        log_if_debug "Notifier: room: #{room.name}"
+        log_if_debug "Notifier: room: name: #{room.name}"
+        log_if_debug "Notifier: room: id: #{room.id}"
+        log_if_debug "Notifier: room: metadata: #{room.metadata}"
         if room.name == config.room_to_monitor
           user_name = response.user.name
           log_if_debug "Notifier: user: #{user_name}"
