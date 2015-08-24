@@ -2,7 +2,9 @@ require 'time'
 module Lita
   module Handlers
     class Notifier < Handler
-      # insert handler code here
+      config :room_to_monitor
+      config :room_to_notify
+      config :ignore_users
 
       route(/.+/) do |response|
         room = response.message.room_object
