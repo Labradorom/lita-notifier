@@ -22,7 +22,7 @@ gem "lita-notifier"
 
 ```
 Lita.configure do |config|
-  config.handlers.notifier.room_to_monitor = '12345_customer_chat'
+  config.handlers.notifier.room_to_monitor = '12345_customer_chat@conf.hipchat.com'
   config.handlers.notifier.room_to_notify = '12345_hidden_secret_room'
   config.handlers.notifier.ignore_users = ['Admin', 'Mike']
 end
