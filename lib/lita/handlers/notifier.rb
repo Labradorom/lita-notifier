@@ -21,7 +21,7 @@ module Lita
               prev_seen_time = Time.parse(prev_seen_support)
               if Time.now - prev_seen_time > (60 * 60)
                 # Haven't seen this user in last 60 minutes
-                robot.send_message(Room.fuzzy_findconfig.room_to_notify), "@all #{user_name} is speaking in #{room.name}")
+                robot.send_message(Room.fuzzy_find(config.room_to_notify), "@all #{user_name} is speaking in #{room.name}")
               else
                 log_if_debug "Notifier: already notified in last hour"
               end
