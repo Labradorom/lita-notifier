@@ -15,11 +15,11 @@ module Lita
               prev_seen_time = Time.parse(prev_seen_support)
               if Time.now - prev_seen_time > (60 * 60)
                 # Haven't seen this user in last 60 minutes
-                robot.send_message(config.room_to_notify, "@all #{user_name} is speaking in #{room.name}"
+                robot.send_message(config.room_to_notify, "@all #{user_name} is speaking in #{room.name}")
               end
             else
               # Haven't seen this user before
-              robot.send_message(config.room_to_notify, "@all #{user_name} is speaking in #{room.name}"
+              robot.send_message(config.room_to_notify, "@all #{user_name} is speaking in #{room.name}")
             end
           end
         end
