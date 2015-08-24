@@ -37,7 +37,7 @@ module Lita
 
       def post_notification(user_name, room_name)
         room_name =~ /\d+_(.+)@/
-        display_name = room_name.gsub('_', ' ').split(' ').map{|w| w.capitalize}.join(' ')
+        display_name = $1.gsub('_', ' ').split(' ').map{|w| w.capitalize}.join(' ')
         target = Source.new(room: config.room_to_notify)
         if target
           robot.send_message(target, "@all #{user_name} is speaking in #{display_name}")
